@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block Centering by Margin</title>
+    <link href="./styles/block.css" rel="stylesheet" />
+    <style>
+      .page {
+        position: relative;
+
+        height: 100vh;
+        margin: 0;
+      }
+
+      .page__block {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        /* margin-top: -50px; */ /* hardcode variant */
+        /* margin-left: -50px; */ /* hardcode variant */
+        transform: translate(-50%, -50%); /* universal variant */
+      }
+    </style>
+  </head>
+  <body class="page">
+    <div class="block page__block"></div>
+  </body>
+</html>
