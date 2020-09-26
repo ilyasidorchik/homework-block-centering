@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block Centering by Flexbox</title>
+    <link href="./styles/block.css" rel="stylesheet" />
+    <style>
+      .page {
+        display: table;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .page__cell {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .page__block {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body class="page">
+    <div class="page__cell">
+      <div class="block page__block"></div>
+    </div>
+  </body>
+</html>
