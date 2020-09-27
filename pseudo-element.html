@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block Centering by Pseudo-element and Inline-block</title>
+    <link href="./styles/body.css" rel="stylesheet" />
+    <link href="./styles/block.css" rel="stylesheet" />
+    <style>
+      .page {
+        height: 100vh;
+
+        text-align: center;
+      }
+
+      .page::before {
+        content: '';
+
+        display: inline-block;
+        height: 100%;
+
+        vertical-align: middle;
+
+        /* for understanding: there is the height full element behind block */
+        /* width: 10px;
+        background: rgba(255, 0, 0, 0.25); */
+      }
+
+      .page__block {
+        display: inline-block;
+        margin-left: -0.25em; /* because of pseudo-element */
+
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body class="body page">
+    <div class="block page__block"></div>
+  </body>
+</html>
